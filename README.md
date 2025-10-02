@@ -13,7 +13,7 @@ WebGL published here (EDIT IT!) https://RhyanSvira.github.io/UnityBoilerplate/
 - [x] I have added the `UNITY_SERIAL` secret to my repository with the Unity license key;
 - [x] I have added the `UNITY_EMAIL` secret to my repository with the Unity username;
 - [x] I have added the `UNITY_PASSWORD` secret to my repository with the Unity password;
-- [ ] I changed the `Settings` > `Actions` > `General` > `Workflow Permissions` to `Read and write permissions for actions`;
+- [x] I changed the `Settings` > `Actions` > `General` > `Workflow Permissions` to `Read and write permissions for actions`;
 - [ ] I cloned the repository to my local machine and opened the project in Unity and made changes to the project;
 - [ ] I have committed and pushed the changes to the `main` or `master` branch of the repository;
 - [x] I understand that every time I push to the `main` or `master` branch, the project will be built and deployed to the `gh-pages` branch;
