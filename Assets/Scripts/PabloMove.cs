@@ -16,8 +16,8 @@ public class PabloMove : MonoBehaviour
     void Update()
     {
         if (Input.GetKey(KeyCode.A))
-            rb.velocity = new Vector2(50, 0);
-        if (Input.GetKey(KeyCode.D))
             rb.velocity = new Vector2(-50, 0);
+        if (Input.GetKey(KeyCode.D))
+            rb.velocity = new Vector2(50, 0);
     }
 }
