@@ -220,6 +220,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4f64c9e79a1353f41a7339f0967d2b01, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  left: {fileID: 1004590621}
+  center: {fileID: 541693290}
+  right: {fileID: 622421964}
 --- !u!61 &32369731
 BoxCollider2D:
   m_ObjectHideFlags: 0
