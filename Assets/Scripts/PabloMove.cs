@@ -7,8 +7,8 @@ public class PabloMove : MonoBehaviour
 {
     private Rigidbody2D rb;
     public Transform left, center, right;
-    private readonly float inputDelay = 1f;
-    private float t;
+    public readonly float inputDelay = 0.25f;
+    public float t=0;
 
     // Start is called before the first frame update
     void Start()
@@ -39,7 +39,8 @@ public class PabloMove : MonoBehaviour
     
     void Update()
     {
-        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && t >= 0){
+        t -= Time.deltaTime;
+        if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && t <= 0){
             if (rb.position.x == center.position.x)
             {
                 transform.position = left.position;
@@ -54,9 +55,8 @@ public class PabloMove : MonoBehaviour
                 transform.position = right.position;
                 t = inputDelay;
             }
-            t -= Time.deltaTime;
         }
-        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && t >= 0){
+        if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && t <= 0){
             if (rb.position.x == center.position.x){
                 transform.position = right.position;
                 t = inputDelay;
@@ -71,7 +71,7 @@ public class PabloMove : MonoBehaviour
                 transform.position = left.position;
                 t = inputDelay;
             }
-            t -= Time.deltaTime;
+            
         }
 
     }
