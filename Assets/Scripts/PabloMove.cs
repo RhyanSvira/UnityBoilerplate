@@ -5,15 +5,15 @@ using UnityEngine;
 
 public class PabloMove : MonoBehaviour
 {
-    private Rigidbody2D rb;
+    private Rigidbody2D _rb;
     public Transform left, center, right;
-    public readonly float inputDelay = 0.25f;
+    public readonly float InputDelay = 0.25f;
     public float t=0;
 
     // Start is called before the first frame update
     void Start()
     {
-        this.rb = GetComponent<Rigidbody2D>();
+        this._rb = GetComponent<Rigidbody2D>();
     }
 
     // Update is called once per frame
@@ -41,35 +41,35 @@ public class PabloMove : MonoBehaviour
     {
         t -= Time.deltaTime;
         if ((Input.GetKey(KeyCode.A) || Input.GetKey(KeyCode.LeftArrow)) && t <= 0){
-            if (rb.position.x == center.position.x)
+            if (_rb.position.x == center.position.x)
             {
                 transform.position = left.position;
-                t = inputDelay;
+                t = InputDelay;
             }
-            else if (rb.position.x == right.position.x)
+            else if (_rb.position.x == right.position.x)
             {
                 transform.position = center.position;
-                t = inputDelay;
-            }else if (rb.position.x == left.position.x)
+                t = InputDelay;
+            }else if (_rb.position.x == left.position.x)
             {
                 transform.position = right.position;
-                t = inputDelay;
+                t = InputDelay;
             }
         }
         if ((Input.GetKey(KeyCode.D) || Input.GetKey(KeyCode.RightArrow)) && t <= 0){
-            if (rb.position.x == center.position.x){
+            if (_rb.position.x == center.position.x){
                 transform.position = right.position;
-                t = inputDelay;
+                t = InputDelay;
             } 
-            else if (rb.position.x == left.position.x)
+            else if (_rb.position.x == left.position.x)
             {
                 transform.position = center.position;
-                t = inputDelay;
+                t = InputDelay;
             } 
-            else if (rb.position.x == right.position.x)
+            else if (_rb.position.x == right.position.x)
             {
                 transform.position = left.position;
-                t = inputDelay;
+                t = InputDelay;
             }
             
         }
