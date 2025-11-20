@@ -30,7 +30,7 @@ public class EnemyPatrol : MonoBehaviour
 
         if (_moveRight)
         {
-            enemyRigidBody2D.AddForce(Vector2.right * EnemySpeed * Time.deltaTime);
+            enemyRigidBody2D.AddForce(Vector2.right * (EnemySpeed * Time.deltaTime));
             if (!_isFacingRight)
                 Flip();
         }
@@ -40,7 +40,7 @@ public class EnemyPatrol : MonoBehaviour
 
         if (!_moveRight)
         {
-            enemyRigidBody2D.AddForce(-Vector2.right * EnemySpeed * Time.deltaTime);
+            enemyRigidBody2D.AddForce(-Vector2.right * (EnemySpeed * Time.deltaTime));
             if (_isFacingRight)
                 Flip();
         }
