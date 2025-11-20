@@ -1,27 +1,60 @@
-using System.Collections;
-using System.Collections.Generic;
+// using System.Collections;
+/csharp
 using UnityEngine;
+using System.Collections;
 
-/*
-public class EnemyMove : MonoBehaviour
+public class EnemyPatrol : MonoBehaviour
 {
-    private Rigidbody2D _enemy;
-    public float speed=2.0f;
-    public float leftBound=-4.0f;
-    public float rightBound=4.0f;
-    private int direction=1;//1 for right, -1 for left <--enum?
-    void Update()
+    Rigidbody2D enemyRigidBody2D;
+    public int UnitsToMove = 5;
+    public float EnemySpeed = 500;
+    public bool _isFacingRight;
+    private float _startPos;
+    private float _endPos;
+
+    public bool _moveRight = true;
+
+
+    // Use this for initialization
+    public void Awake()
     {
-        transform.Translate(Vector3 * speed * direction * Time.deltaTime);//what is this line supposed to do?
-        if (transform.position.x >= rightBound)
-        {
-            direction = -1;
-        }
-        else if (transform.position.x <= leftBound) 
-        {
-            direction = 1; 
-        }
+        enemyRigidBody2D = GetComponent<Rigidbody2D>();
+        _startPos = transform.position.x;
+        _endPos = _startPos + UnitsToMove;
+        _isFacingRight = transform.localScale.x > 0;
     }
+
+
+// Update is called once per frame
+    public void Update()
+    {
+
+        if (_moveRight)
+        {
+            enemyRigidBody2D.AddForce(Vector2.right * EnemySpeed * Time.deltaTime);
+            if (!_isFacingRight)
+                Flip();
+        }
+
+        if (enemyRigidBody2D.position.x >= _endPos)
+            _moveRight = false;
+
+        if (!_moveRight)
+        {
+            enemyRigidBody2D.AddForce(-Vector2.right * EnemySpeed * Time.deltaTime);
+            if (_isFacingRight)
+                Flip();
+        }
+        if (enemyRigidBody2D.position.x <= _startPos)
+            _moveRight = true;
+
+
+    }
+
+    public void Flip()
+    {
+        transform.localScale = new Vector3(-transform.localScale.x, transform.localScale.y, transform.localScale.z);
+        _isFacingRight = transform.localScale.x > 0;
+    }
+
 }
-*/
-    
