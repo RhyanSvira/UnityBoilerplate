@@ -1,8 +1,8 @@
-Hcsharp
+csharp
 using UnityEngine;
 using System.Collections;
 
-public class EnemyPatrol : MonoBehaviour
+public class EnemyMovement: MonoBehaviour
 {
     Rigidbody2D enemyRigidBody2D;
     public int UnitsToMove = 5;
