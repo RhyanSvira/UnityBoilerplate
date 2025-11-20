@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
+/*
 public class EnemyMove : MonoBehaviour
 {
     private Rigidbody2D _enemy;
@@ -11,7 +12,7 @@ public class EnemyMove : MonoBehaviour
     private int direction=1;//1 for right, -1 for left <--enum?
     void Update()
     {
-        transform.Translate(Vector3 * speed * direction * Time.deltaTime);
+        transform.Translate(Vector3 * speed * direction * Time.deltaTime);//what is this line supposed to do?
         if (transform.position.x >= rightBound)
         {
             direction = -1;
@@ -22,4 +23,5 @@ public class EnemyMove : MonoBehaviour
         }
     }
 }
+*/
     
