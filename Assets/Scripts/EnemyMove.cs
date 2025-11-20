@@ -1,5 +1,4 @@
 // using System.Collections;
-/csharp
 using UnityEngine;
 using System.Collections;
 
