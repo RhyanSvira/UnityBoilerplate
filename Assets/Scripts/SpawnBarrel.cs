@@ -18,8 +18,8 @@ public class SpawnBarrel : MonoBehaviour
         if (Input.GetMouseButton(0) && t <= 0)
         {
             Rigidbody2D p =Instantiate(projectile, transform.position, transform.rotation);
-            t =InputDelay;
             counter++;
+            t =InputDelay;
             
         }
     }
