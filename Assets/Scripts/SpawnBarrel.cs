@@ -7,15 +7,19 @@ public class SpawnBarrel : MonoBehaviour
 {
     public Rigidbody2D projectile;
     public float speed = 4;
-    public readonly float InputDelay = 0.25f;
+    public readonly float InputDelay = 0.75f;
     public float t=0;
+    public int counter = 0;
     
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetMouseButton(0))
+        t -= Time.deltaTime;
+        if (Input.GetMouseButton(0) && t <= 0)
         {
             Rigidbody2D p =Instantiate(projectile, transform.position, transform.rotation);
+            t =InputDelay;
+            counter++;
             
         }
     }
