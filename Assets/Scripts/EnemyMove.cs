@@ -6,7 +6,7 @@
 // {
 //     private Rigidbody2D _enemy;
 //     public float speed=2.0f;
-//     public float leaftBound=-4.0f;
+//     public float leftBound=-4.0f;
 //     public float rightBound=4.0f;
 //     private int direction=1;//1 for right, -1 for left
 //
