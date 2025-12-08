@@ -6,7 +6,7 @@ public class EnemyMove : MonoBehaviour
 {
     Rigidbody2D _enemyRigidBody2D;
     [FormerlySerializedAs("UnitsToMove")] public int unitsToMove = 8;
-    [FormerlySerializedAs("EnemySpeed")] public float enemySpeed = 500;
+    [FormerlySerializedAs("EnemySpeed")] public float enemySpeed = 400;
     [FormerlySerializedAs("_isFacingRight")] public bool isFacingRight;
     private float _startPos;
     private float _endPos;
